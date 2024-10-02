@@ -4,8 +4,6 @@ import { collectDefaultMetrics, register } from 'prom-client';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
-  collectDefaultMetrics();
   app
     .getHttpAdapter()
     .getInstance()
